@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    
+    tools {nodejs "node"}
     stages {
         stage('Checkout') {
             steps {
@@ -17,7 +17,7 @@ pipeline {
                 }
             }
         }
-                
+
         stage('Run Tests') {
             steps {
                 // Run tests (replace with your test command if applicable)
