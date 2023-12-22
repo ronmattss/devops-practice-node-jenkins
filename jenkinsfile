@@ -35,15 +35,15 @@ pipeline {
         //     }
         // }
 
-        stage('Deploy') {
-            steps {
-                // Add deployment steps if needed
-                // For a simple example, you can deploy to a local server
-                script {
-                    bat 'node app'
-                }
-            }
-        }
+        // stage('Deploy') {
+        //     steps {
+        //         // Add deployment steps if needed
+        //         // For a simple example, you can deploy to a local server
+        //         script {
+        //             bat 'node app'
+        //         }
+        //     }
+        // }
     }
 
     post {
