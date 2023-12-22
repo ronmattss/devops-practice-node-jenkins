@@ -40,7 +40,7 @@ pipeline {
                 // Add deployment steps if needed
                 // For a simple example, you can deploy to a local server
                 script {
-                    bat 'npm start'
+                    bat 'node app'
                 }
             }
         }
