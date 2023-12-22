@@ -4,15 +4,15 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout the code from your GitHub repository
-                git branch:'main',url: 'https://github.com/ronmattss/devops-practice-node-jenkins.git'
+                git branch: 'main', url: 'https://github.com/ronmattss/devops-practice-node-jenkins.git'
             }
         }
-        
+
         stage('Install Dependencies') {
             steps {
                 // Install project dependencies
                 script {
-                    sh 'npm install'
+                    bat 'npm install'
                 }
             }
         }
@@ -21,31 +21,31 @@ pipeline {
         //     steps {
         //         // Run tests (replace with your test command if applicable)
         //         script {
-        //             sh 'npm test'
+        //             bat 'npm test'
         //         }
         //     }
         // }
-        
+
         // stage('Build') {
         //     steps {
         //         // Build your Node.js application (replace with your build command if applicable)
         //         script {
-        //             sh 'npm run build'
+        //             bat 'npm run build'
         //         }
         //     }
         // }
-        
+
         stage('Deploy') {
             steps {
                 // Add deployment steps if needed
                 // For a simple example, you can deploy to a local server
                 script {
-                    sh 'npm start'
+                    bat 'npm start'
                 }
             }
         }
     }
-    
+
     post {
         success {
             echo 'Pipeline succeeded! Add more post-success actions if needed.'
