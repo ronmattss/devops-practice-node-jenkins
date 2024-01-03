@@ -12,6 +12,11 @@ app.get('test get', (req,res) =>
   res.json({ message: 'Get response test' });
   
 });
+app.get('/test', (req,res) =>
+{
+  res.json({ message: 'Get test' });
+  
+});
 
 // Start the server
 app.listen(port, () => {
